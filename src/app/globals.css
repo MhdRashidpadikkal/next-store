@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #561C24;
+  --color-secondary: #6D2932;
+  --color-accent: #C7B7A3;
+  --color-background: #E8D8C4;
+
+  --background-image-baner1: url("/images/home/baner-1.jpg");
+  --background-image-baner2: url("/images/home/baner-2.jpg");
+  --background-image-baner3: url("/images/home/baner-3.jpeg");
+
+}
