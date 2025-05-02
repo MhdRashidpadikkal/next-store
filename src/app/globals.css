@@ -11,3 +11,9 @@
   --background-image-baner3: url("/images/home/baner-3.jpeg");
 
 }
+
+
+body {
+  user-select: none;
+}
+
