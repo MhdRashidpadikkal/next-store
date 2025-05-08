@@ -3,6 +3,9 @@ import { Hero } from "@/components/home/Hero";
 import TrendingProduct from "@/components/home/TrendingProduct";
 import Image from "next/image";
 
+
+
+
 export default function Home() {
   return (
    <div>
