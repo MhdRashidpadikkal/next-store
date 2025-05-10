@@ -29,7 +29,7 @@ export default function ProductList({ products }: { products: Product[] }) {
                         onClick={() => handleClick(product.slug)}
                     >
                         <Image
-                            src={`http://localhost:1337${product.image.url}`}
+                            src={product.image.url}
                             alt={product.name}
                             fill
                             className='object-cover rounded-md  '
