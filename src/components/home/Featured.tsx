@@ -17,7 +17,6 @@ export default function Featured() {
                 {categories.map((category, index) => (
                     <div key={index} className=' flex flex-col items-center justify-center gap-2 cursor-pointer '>
                         <Image src={category.image} alt={category.name} width={200} height={200} className=' w-52 h-44 rounded-lg object-cover' />
-                        {/* <Image src={category.image} alt={category.name} className=' w-52 h-44 rounded-lg object-cover' /> */}
                         <h3 className='md:text-xl font-semibold text-nowrap'>{category.name}</h3>
                     </div>
                 ))}

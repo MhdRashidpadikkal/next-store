@@ -30,7 +30,7 @@ export default async function page({ params }: Props) {
                     >
                         <div className='relative w-full md:w-[500px] h-[300px] md:h-[500px] mr-4'>
                             <Image
-                                src={`http://localhost:1337${product.image.url}`}
+                                src={product.image.url}
                                 alt={product.name}
                                 fill
                                 className='object-cover rounded-md '
