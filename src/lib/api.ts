@@ -1,5 +1,5 @@
 export const fetchAllProducts = async () => {
-    const response = await fetch("http://localhost:1337/api/products?populate=image");
+    const response = await fetch("https://next-store-db.onrender.com/api/products?populate=image");
     if (!response.ok) {
         throw new Error('Failed to fetch products');
     }
@@ -8,7 +8,7 @@ export const fetchAllProducts = async () => {
 }
 
 export const fetchAllProductsBySlug = async (slug: string) => {
-    const response = await fetch(`http://localhost:1337/api/products?populate=image&filters[slug][$eq]=${slug}`);
+    const response = await fetch(`https://next-store-db.onrender.com/api/products?populate=image&filters[slug][$eq]=${slug}`);
     if (!response.ok) {
         throw new Error('Failed to fetch products by slug');
     }

@@ -5,7 +5,6 @@ import { Menu, ShoppingCart, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
 
 
 export default function Navbar() {
@@ -41,7 +40,7 @@ export default function Navbar() {
         }
     }, [dispatch])
 
-    const { user, jwt } = useAppSelector((state) => state.auth)
+    const { user } = useAppSelector((state) => state.auth)
 
     const pathname = usePathname()
     const isHome = pathname === "/"

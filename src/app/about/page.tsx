@@ -11,7 +11,7 @@ export default function About() {
                 <div className='flex flex-col justify-center items-center text-white backdrop-blur-[5px]  '>
                     <h1 className='text-2xl md:text-5xl font-semibold text-[#ffffff]   ' > About Us – Next Store</h1>
                     <h2 className='md:text-3xl text-[#dd243d] font-semibold md:mt-2 '>Design Your Dream Space with Next Store</h2>
-                    <p className=' text-sm md:text-[18px] mt-2 text-wrap px-5 md:px-20'>Welcome to Next Store – your go-to destination for modern, curated living. We believe that a beautiful home isn’t a luxury — it’s a lifestyle. Whether you're revamping your living room or finding the perfect accent piece, 
+                    <p className=' text-sm md:text-[18px] mt-2 text-wrap px-5 md:px-20'>Welcome to Next Store – your go-to destination for modern, curated living. We believe that a beautiful home isn&rsquo;t a luxury — it&rsquo;s a lifestyle. Whether you&rsquo;re revamping your living room or finding the perfect accent piece, 
                         Next Store is here to inspire, guide, and deliver.</p>
                 </div>
             </div>

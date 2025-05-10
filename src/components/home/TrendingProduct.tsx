@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 interface Product {
@@ -82,7 +83,7 @@ export default function TrendingProduct() {
           products.map((products) => {
             return (
               <div key={products.id} className="relative flex-shrink-0 flex flex-col items-center justify-start  w-[90%] sm:w-1/2 md:w-1/2 lg:w-1/4 xl:w-1/5 border rounded-lg shadow-md bg-white pb-3 ">
-                <img src={products.image} alt={products.name} className="w-full h-48 object-cover rounded-t-lg" />
+                <Image src={products.image} alt={products.name} className="w-full h-48 object-cover rounded-t-lg" />
                 <h3 className="text-lg font-semibold mt-2">{products.name}</h3>
                 <span className="text-xl font-bold text-primary">${products.price}</span>
                 <p className="text-gray-600 px-2">{products.description}</p>

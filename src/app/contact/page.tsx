@@ -6,7 +6,7 @@ export default function Contact() {
         
         <div className='flex flex-col justify-center items-center lg:w-1/2 h-[500px] bg-white px-5 rounded-lg '>
             <h2 className='text-2xl md:text-3xl font-semibold'>Contact Next Store</h2>
-            <p className='mt-1 px-5'>Have questions or need support? We're here to help! Fill out the form or reach out directly — the Next Store team will get back to you shortly.</p>
+            <p className='mt-1 px-5'>Have questions or need support? We&rsquo;re here to help! Fill out the form or reach out directly — the Next Store team will get back to you shortly.</p>
         
             <form 
             className='flex flex-col gap-3 w-full px-14 mt-5  '

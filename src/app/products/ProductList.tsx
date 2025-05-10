@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { Product } from '@/types/product'
 import Image from 'next/image'
-import { useAppDispatch, useAppSelector } from '@/store/hook'
+import { useAppDispatch } from '@/store/hook'
 import { addToCart } from '@/store/slices/cartSlice'
 
 
@@ -11,7 +11,6 @@ import { addToCart } from '@/store/slices/cartSlice'
 export default function ProductList({ products }: { products: Product[] }) {
     const router = useRouter()
     const dispatch = useAppDispatch()
-    const {cartItems} = useAppSelector((state) => state.cart)
 
 
     const handleClick = (slug: string) => {

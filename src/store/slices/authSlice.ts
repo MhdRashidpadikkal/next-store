@@ -1,6 +1,6 @@
 import { User, AuthState, LoginData, RegisterData } from "@/types/auth";
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 export const register = createAsyncThunk(
     'auth/register',
@@ -12,14 +12,15 @@ export const register = createAsyncThunk(
         }
 
         try {
-            const response = await axios.post("http://localhost:1337/api/auth/local/register", {
+            const response = await axios.post("https://next-store-db.onrender.com/api/auth/local/register", {
                 username,
                 email,
                 password
             });
             return response.data; // user and jwt
-        }catch (error: any) {
-            return rejectWithValue(error.response?.data?.message || error.message);
+        }catch (error) {
+            const axiosError = error as AxiosError<{message: string}>
+            return rejectWithValue(axiosError.response?.data?.message || axiosError.message);
         }
     }
 );
@@ -30,13 +31,14 @@ export const login = createAsyncThunk(
         const { identifier, password } = credentials;
 
         try {
-            const response = await axios.post("http://localhost:1337/api/auth/local", {
+            const response = await axios.post("https://next-store-db.onrender.com/api/auth/local", {
                 identifier,
                 password
             });
             return response.data; // user and jwt
-        }catch (error: any) {
-            return rejectWithValue(error.response?.data?.message || error.message);
+        }catch (error) {
+            const axiosError = error as AxiosError<{message: string}>
+            return rejectWithValue(axiosError.response?.data?.message || axiosError.message);
         }
     }
 
