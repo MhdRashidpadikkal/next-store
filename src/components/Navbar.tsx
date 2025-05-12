@@ -22,8 +22,7 @@ export default function Navbar() {
     const dispatch = useAppDispatch();
     const router = useRouter()
 
-    const {totalQuantity} = useAppSelector((state) => state.cart)
-    console.log("total quantity", totalQuantity)
+    const { totalQuantity } = useAppSelector((state) => state.cart)
 
     useEffect(() => {
         const storedUser = localStorage.getItem("user")
@@ -125,8 +124,10 @@ export default function Navbar() {
                     }
 
                 </div>
-                <button className='flex items-center mb-1 cursor-pointer'>
-                    <Link href="/cart"><ShoppingCart className='h-[18px] ' /></Link>
+                <button className='flex items-center mb-1 cursor-pointer relative'>
+                    <Link href="/cart"><ShoppingCart className='h-[18px] relative z-50 ' /></Link>
+                    {totalQuantity > 0 && <span className='absolute bottom-[9px] left-3 bg-white w-[20] h-[20] z-20 rounded-full text-primary text-center'>{totalQuantity}</span>
+                    }
                 </button>
             </div>
         </div>

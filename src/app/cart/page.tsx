@@ -29,7 +29,7 @@ export default function Page() {
                             <div className='relative w-[200px] h-[100px] mr-4'
                             >
                                 <Image
-                                    src={`http://localhost:1337${item.image.url}`}
+                                    src={item.image.url}
                                     alt={item.name}
                                     fill
                                     className='object-cover rounded-md  '
